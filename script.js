@@ -1,5 +1,5 @@
 // Dirección web de la API https://pokeapi.co/
-//Existe desde el pokemon 1 hasta el 898
+// Existe desde el pokemon 1 hasta el 898
 
 var imagenPokemon = document.getElementById("imgPokemon");
 var nombrePokemon = document.getElementById("name");
@@ -31,6 +31,7 @@ const fetchData = async (id) => {
     //Creamos el objeto con la información necesaria que se menciona abajo.
     const pokemon = {
       img: data.sprites.other.dream_world.front_default,
+      img1: data.sprites.other.home.front_default,
       nombre: data.forms[0].name,
       hp: data.stats[0].base_stat,
       ataque: data.stats[1].base_stat,
@@ -59,6 +60,10 @@ const pintarDatos = (pokemon) => {
   speDefPokemon.innerHTML = pokemon.defensaEspecial;
   speedPokemon.innerHTML = pokemon.velocidad;
   typePokemon.innerHTML = pokemon.tipo;
+
+  if (contador >= 650) {
+    imagenPokemon.setAttribute("src", pokemon.img1); //Al atributo src le asigno la URL traida de la API
+  }
 };
 
 //Termina de cargar el contenido y hace lo que le indiquemos en el código
@@ -68,20 +73,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
   previousButton.addEventListener('click', () => {
     contador -= 1;
+    if (contador < 1) {
+      contador = 898;
+      //Llamo a fetchData para mostar la información en la consola
+      fetchData(contador);
+    }
     //Llamo a fetchData para mostar la información en la consola
     fetchData(contador);
-    if (contador < 1) {
-      contador = 1;
-    }
   });
   
   nextButton.addEventListener('click', () => {
     contador += 1;
+    if (contador > 898) {
+      contador = 1;
+      //Llamo a fetchData para mostar la información en la consola
+      fetchData(contador);
+    }
     //Llamo a fetchData para mostar la información en la consola
     fetchData(contador);
-    if (contador > 898) {
-      contador = 898;
-    }
   });
+
+  document.addEventListener('keydown', (event) => {
+    var keyValue = event.key;
+    
+    if (keyValue == "ArrowLeft") {
+      contador -= 1;
+      if (contador < 1) {
+        contador = 898;
+        //Llamo a fetchData para mostar la información en la consola
+        fetchData(contador);
+      }
+      //Llamo a fetchData para mostar la información en la consola
+      fetchData(contador);
+    }
+
+    if (keyValue == "ArrowRight") {
+      contador += 1;
+      if (contador > 898) {
+        contador = 1;
+        //Llamo a fetchData para mostar la información en la consola
+        fetchData(contador);
+      }
+      //Llamo a fetchData para mostar la información en la consola
+      fetchData(contador);
+    }
+  }, false);
 
 });
