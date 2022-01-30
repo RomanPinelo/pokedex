@@ -24,7 +24,7 @@ La página hace uso de una API de Pokemon. Se pintó un pokedex con una pantalla
 
 También se hizo responsivo.
 
-![muestra1](https://user-images.githubusercontent.com/71656431/51690111-ecbedea7-f611-4c3a-a4de-ff766044e366.jpg)
+![muestra1](https://user-images.githubusercontent.com/71656431/151690582-75dbdb97-a812-4e01-a8bc-7ea58ee01fc6.jpg)
 
 
 Para cambiar a otro Pokemon se puede hacer con los botones de flecha del teclado o bien, haciendo click sobre los botones del pokedex.
