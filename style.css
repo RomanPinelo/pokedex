@@ -137,7 +137,7 @@ button {
     width: 55%;
     height:27.5%;
     position: absolute;
-    left: 52.5%;
+    right: -1%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 65% 100%);
   }
 
