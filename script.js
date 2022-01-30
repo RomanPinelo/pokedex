@@ -1,4 +1,4 @@
-// Dirección web de la API https://pokeapi.co/
+// Dirección web de la API: https://pokeapi.co/
 // Existe desde el pokemon 1 hasta el 898
 
 var imagenPokemon = document.getElementById("imgPokemon");
