@@ -71,12 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //Llamo a fetchData para mostar la información en la consola
   fetchData(contador);
 
+  //Controla el contador haciendo click en los botones pintados en el DOM
   previousButton.addEventListener('click', () => {
     contador -= 1;
     if (contador < 1) {
       contador = 898;
-      //Llamo a fetchData para mostar la información en la consola
-      fetchData(contador);
     }
     //Llamo a fetchData para mostar la información en la consola
     fetchData(contador);
@@ -86,13 +85,12 @@ document.addEventListener("DOMContentLoaded", () => {
     contador += 1;
     if (contador > 898) {
       contador = 1;
-      //Llamo a fetchData para mostar la información en la consola
-      fetchData(contador);
     }
     //Llamo a fetchData para mostar la información en la consola
     fetchData(contador);
   });
 
+  //Controla el contador pulsando las teclas de flecha izquierda y derecha del teclado 
   document.addEventListener('keydown', (event) => {
     var keyValue = event.key;
     
@@ -100,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
       contador -= 1;
       if (contador < 1) {
         contador = 898;
-        //Llamo a fetchData para mostar la información en la consola
-        fetchData(contador);
       }
       //Llamo a fetchData para mostar la información en la consola
       fetchData(contador);
@@ -111,8 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
       contador += 1;
       if (contador > 898) {
         contador = 1;
-        //Llamo a fetchData para mostar la información en la consola
-        fetchData(contador);
       }
       //Llamo a fetchData para mostar la información en la consola
       fetchData(contador);
