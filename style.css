@@ -66,6 +66,10 @@ img {
   margin: 0.5rem 1rem;
 }
 
+.pokedex__info--data p span {
+  font-weight: 400;
+}
+
 .pokedex__info--data .name {
   text-align: center;
   font-size: 1.5rem;
@@ -127,13 +131,13 @@ button {
     position: relative;
   }
 
-  .pokedex__cover-picture {
+  .pokedex__cover--picture {
     display: block;
     background-color: #000;
     width: 55%;
     height:27.5%;
     position: absolute;
-    right: 0;
+    left: 50%;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 65% 100%);
   }
 
