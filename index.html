@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/pokeball-icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pokedex</title>
+  </head>
+
+  <body>
+
+    <main class="pokedex">
+
+      <section class="pokedex__info">
+
+        <div class="pokedex__info--picture">
+
+          <img id="imgPokemon" src="" alt="Pokemon">
+
+        </div>
+        
+        <div class="pokedex__info--data">
+
+          <p class="name" id="name">-</p>
+          <p>HP: <span id="hp"></span></p>
+          <p>Ataque: <span id="att"></span></p>
+          <p>Defensa: <span id="def"></span></p>
+          <p>Ataque especial: <span id="speAtt"></span></p>
+          <p>Defensa especial: <span id="speDef"></span></p>
+          <p>Velocidad: <span id="speed"></span></p>
+          <p>Tipo: <span id="type"></span></p>
+
+        </div>
+
+        <div class="pokedex__info--buttons">
+
+          <button class="prevButton" id="prevButton"></button>
+          <span class="led"></span>
+          <button class="nextButton" id="nextButton"></button>
+
+        </div>
+
+      </section>
+
+      <section class="pokedex__cover">
+        <span class="pokedex__cover-picture"></span>
+      </section>
+
+    </main>
+
+    <script src="./script.js"></script>
+  
+  </body>
+
+</html>
